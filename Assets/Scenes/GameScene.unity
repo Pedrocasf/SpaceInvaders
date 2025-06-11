@@ -589,6 +589,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6430237950150081712, guid: 59f5d5cae3eaa30429a63fdbbe638c10, type: 3}
+      propertyPath: coolDownTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430237950150081712, guid: 59f5d5cae3eaa30429a63fdbbe638c10, type: 3}
       propertyPath: projectileOrign
       value: 
       objectReference: {fileID: 1423818533057728544}

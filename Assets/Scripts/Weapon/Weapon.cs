@@ -6,9 +6,15 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform projectileOrign;
     [SerializeField] private Alliance alliance;
     [SerializeField] private float projectileSpeed;
+    [SerializeField] private float coolDownTime;
+    private float coolDownUntilNextPress;
     public void Shoot()
     {
-        Projectile projectile = Instantiate(projectilePrefab,projectileOrign.position,Quaternion.identity);
-        projectile.Initialize(transform.up * projectileSpeed, alliance);
+        if (coolDownUntilNextPress < Time.time)
+        {
+            Projectile projectile = Instantiate(projectilePrefab, projectileOrign.position, Quaternion.identity);
+            projectile.Initialize(transform.up * projectileSpeed, alliance);
+            coolDownUntilNextPress = Time.time + coolDownTime;
+        }
     }
 }
