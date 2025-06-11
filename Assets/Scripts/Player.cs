@@ -21,7 +21,7 @@ public class Player : DamageableEntity
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         Vector3 moveDirection = new Vector3(horizontalInput, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             weapon.Shoot();
         }
